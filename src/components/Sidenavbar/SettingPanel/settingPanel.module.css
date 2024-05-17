@@ -1,0 +1,55 @@
+.setting_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.setting_panel_header {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+
+.setting_panel_header .header_text {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.setting_panel_header .back_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  place-items: center;
+}
+
+.node_update_component {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 8px;
+}
+
+.node_update_component .title {
+  font-size: 16px;
+  color: var(--border-color);
+  font-weight: 600;
+}
+
+.node_update_component .text_update_input {
+  width: 95%;
+  height: 100px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  padding: 8px;
+  font-weight: 550;
+  max-width: 100%;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid var(--border-color);
+}

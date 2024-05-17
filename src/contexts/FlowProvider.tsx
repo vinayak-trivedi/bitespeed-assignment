@@ -74,6 +74,26 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     },
     [reactFlowInstance, nodes.length]
   );
+
+  // Currently, we are only updating the content key, but I have this function in this way, so that once we add more features to it, and maybe decided to update more values, we can do that easily.
+  const updateNode = useCallback(
+    (value: string, key: string) => {
+      setNodes((nds) =>
+        nds.map((node) => {
+          if (node.id === selectedNode?.id) {
+            node.data = {
+              ...node.data,
+              [key]: value,
+            };
+          }
+
+          return node;
+        })
+      );
+    },
+    [nodes, selectedNode]
+  );
+
   return (
     <FlowContext.Provider
       value={{
@@ -86,6 +106,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         edges,
         onNodesChange,
         selectedNode,
+        updateNode,
       }}
     >
       <ReactFlowProvider>{children}</ReactFlowProvider>
