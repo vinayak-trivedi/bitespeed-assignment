@@ -1,9 +1,11 @@
 :root {
   --primary-button-color: #2620D9;
+  --border-color: #d3d3d3
 }
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
