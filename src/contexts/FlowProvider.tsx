@@ -60,12 +60,15 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         y: event.clientY,
       });
 
+      const label = event.dataTransfer.getData('content');
+
       const newNode: Node = {
-        id: `${nodes.length}`,
+        id: `${nodes.length + 1}`,
         type,
         position,
-        data: { label: `${type} node` },
+        data: { heading: "Send Message", content: label }
       };
+
 
       setNodes((nds) => nds.concat(newNode));
     },

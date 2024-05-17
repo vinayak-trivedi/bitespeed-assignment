@@ -1,3 +1,7 @@
+:root {
+  --primary-button-color: #2620D9;
+}
+
 body {
   margin: 0;
 }
