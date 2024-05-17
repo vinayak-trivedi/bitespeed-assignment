@@ -1,0 +1,19 @@
+.save_changes_container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background: rgb(211, 211, 211, 0.7);
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+.save_changes_container .save_button {
+  background: white;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid var(--primary-button-color);
+  color: var(--primary-button-color);
+  font-size: 14px;
+  font-weight: 550;
+  border-radius: 10px;
+}
