@@ -28,7 +28,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge[]>([]);
   const [reactFlowInstance, setReactFlowInstance] =
     useState<ReactFlowInstance | null>(null);
-  const selectedNode = nodes.filter((node) => node.selected === true);
+  const selectedNode = nodes.find((node) => node.selected === true);
 
   const onConnect = useCallback(
     (params: Connection | Edge) => setEdges((eds) => addEdge(params, eds)),
