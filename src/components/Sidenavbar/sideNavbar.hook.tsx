@@ -10,7 +10,6 @@ export const useNodes = () => {
         nodeType: string,
         content: string
       ) => {
-        console.log('nodetype', nodeType, 'content', content, 'testing ')
         event.dataTransfer.setData('application/reactflow', nodeType);
         event.dataTransfer.setData('content', content);
         event.dataTransfer.effectAllowed = 'move';
