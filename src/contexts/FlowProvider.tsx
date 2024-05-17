@@ -68,7 +68,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         type,
         position,
         data: { heading: 'Send Message', content: label },
-        selected: true
+        selected: true,
       };
 
       setNodes((nds) => nds.concat(newNode));
@@ -95,6 +95,17 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     [nodes, selectedNode]
   );
 
+  const markAllAsUnSelected = useCallback(() => {
+    setNodes((nds) =>
+      nds.map((node) => {
+        if (node.selected) {
+          node.selected = false;
+        }
+        return node;
+      })
+    );
+  }, [nodes]);
+
   return (
     <FlowContext.Provider
       value={{
@@ -108,6 +119,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         onNodesChange,
         selectedNode,
         updateNode,
+        markAllAsUnSelected,
       }}
     >
       <ReactFlowProvider>{children}</ReactFlowProvider>

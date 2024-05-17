@@ -5,10 +5,11 @@ import styles from './settingPanel.module.css';
 const SettingPanelPresentation: React.FC<{
   content: string;
   onChange: (updatedValue: string, keyToChange: string) => void;
-}> = ({ content, onChange }) => {
+  markAllAsUnSelected: () => void;
+}> = ({ content, onChange, markAllAsUnSelected }) => {
   return (
     <div className={styles.setting_panel}>
-      <HeaderComponent />
+      <HeaderComponent markAllAsUnSelected={markAllAsUnSelected} />
       <div className={styles.line} />
       <NodeUpdateComponent content={content} onChange={onChange} />
     </div>
