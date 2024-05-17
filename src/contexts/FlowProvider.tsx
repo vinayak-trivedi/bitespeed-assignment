@@ -68,6 +68,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         type,
         position,
         data: { heading: 'Send Message', content: label },
+        selected: true
       };
 
       setNodes((nds) => nds.concat(newNode));
