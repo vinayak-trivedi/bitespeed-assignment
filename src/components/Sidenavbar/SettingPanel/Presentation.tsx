@@ -12,6 +12,7 @@ const SettingPanelPresentation: React.FC<{
       <HeaderComponent markAllAsUnSelected={markAllAsUnSelected} />
       <div className={styles.line} />
       <NodeUpdateComponent content={content} onChange={onChange} />
+      <div className={styles.line} />
     </div>
   );
 };
