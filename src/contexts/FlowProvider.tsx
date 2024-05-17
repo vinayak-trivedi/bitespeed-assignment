@@ -81,6 +81,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         setReactFlowInstance,
         nodes,
         edges,
+        onNodesChange,
       }}
     >
       <ReactFlowProvider>{children}</ReactFlowProvider>

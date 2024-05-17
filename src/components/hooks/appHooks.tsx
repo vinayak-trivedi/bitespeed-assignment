@@ -5,13 +5,13 @@ export const useGetInitialNodes = () => {
       id: '1',
       type: 'node',
       data: { heading: 'Send Message', content: 'Text 1' },
-      position: { x: 50, y: 200 },
+      position: { x: 10, y: 200 },
     },
     {
       id: '2',
       type: 'node',
       data: { heading: 'Send Message', content: 'Text 2' },
-      position: { x: 300, y: 100 },
+      position: { x: 200, y: 100 },
     },
   ];
 };
