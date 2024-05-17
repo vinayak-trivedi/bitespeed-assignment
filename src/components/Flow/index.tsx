@@ -16,7 +16,6 @@ const Flow: React.FC = () => {
     onDragOver,
   } = useFlow();
 
-  console.log(nodes, 'nodes');
 
   return (
     <ReactFlow
