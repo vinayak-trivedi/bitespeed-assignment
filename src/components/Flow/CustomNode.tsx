@@ -3,12 +3,16 @@ import styles from './flow.module.css';
 
 const CustomNode: React.FC<any> = ({ data, selected }) => {
   return (
-    <div className={`${styles.custom_node} ${selected && styles.custom_node_selected}`}>
+    <div
+      className={`${styles.custom_node} ${
+        selected && styles.custom_node_selected
+      }`}
+    >
       <div className={styles.top_section}>
-        <img src="/whatsapp.svg" width={'10px'} height={'10px'} />
+        <img src="/message.svg" width={'10px'} height={'10px'} />
         <p className={styles.title}>{data.heading}</p>
         <div className={styles.spacer} />
-        <img src="/message.svg" width={'10px'} height={'10px'} />
+        <img src="/whatsapp.svg" width={'12px'} height={'12px'} />
       </div>
       <p className={styles.content}>{data.content}</p>
       <Handle
