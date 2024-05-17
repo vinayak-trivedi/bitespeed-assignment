@@ -3,7 +3,7 @@ import styles from './flow.module.css';
 
 const CustomNode: React.FC<any> = ({ data, selected }) => {
   return (
-    <div className={styles.custom_node}>
+    <div className={`${styles.custom_node} ${selected && styles.custom_node_selected}`}>
       <div className={styles.top_section}>
         <img src="/whatsapp.svg" width={'10px'} height={'10px'} />
         <p className={styles.title}>{data.heading}</p>

@@ -4,6 +4,10 @@
   width: 150px;
 }
 
+.custom_node_selected {
+  border: 1px solid var(--primary-button-color);
+}
+
 .custom_node .top_section {
   background: rgb(8, 201, 189, 0.7);
   padding: 5px 10px;

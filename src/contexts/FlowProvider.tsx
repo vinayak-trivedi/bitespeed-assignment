@@ -28,6 +28,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge[]>([]);
   const [reactFlowInstance, setReactFlowInstance] =
     useState<ReactFlowInstance | null>(null);
+  const selectedNode = nodes.filter((node) => node.selected === true);
 
   const onConnect = useCallback(
     (params: Connection | Edge) => setEdges((eds) => addEdge(params, eds)),
@@ -66,9 +67,8 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         id: `${nodes.length + 1}`,
         type,
         position,
-        data: { heading: "Send Message", content: label }
+        data: { heading: 'Send Message', content: label },
       };
-
 
       setNodes((nds) => nds.concat(newNode));
     },
@@ -85,6 +85,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         nodes,
         edges,
         onNodesChange,
+        selectedNode,
       }}
     >
       <ReactFlowProvider>{children}</ReactFlowProvider>
