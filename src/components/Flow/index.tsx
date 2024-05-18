@@ -4,6 +4,7 @@ import 'reactflow/dist/style.css';
 import styles from './flow.module.css';
 import Node from './CustomNode';
 
+// this is how we provide custom component for nodes, refer the docs: https://reactflow.dev/examples/nodes/custom-node
 const nodeTypes = { node: Node };
 
 const Flow: React.FC = () => {

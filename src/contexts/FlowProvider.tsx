@@ -30,16 +30,19 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     useState<ReactFlowInstance | null>(null);
   const selectedNode = nodes.find((node) => node.selected === true);
 
+  // This function called when a edge is connect to a node
   const onConnect = useCallback(
     (params: Connection | Edge) => setEdges((eds) => addEdge(params, eds)),
     []
   );
 
+  // This function called when drag is completed
   const onDragOver = useCallback((event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = 'move';
   }, []);
 
+  // This function called when a node is dropped in the flow.
   const onDrop = useCallback(
     (event: DragEvent<HTMLDivElement>) => {
       event.preventDefault();
@@ -76,7 +79,10 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     [reactFlowInstance, nodes.length]
   );
 
-  // Currently, we are only updating the content key, but I have this function in this way, so that once we add more features to it, and maybe decided to update more values, we can do that easily.
+  // This function is called when a node is updated from the settings panel.
+  // Currently, we are only updating the content key. However, I've structured this function to accommodate future enhancements.
+  // By maintaining this structure, it'll be easier to extend functionality and update additional values as needed.
+
   const updateNode = useCallback(
     (value: string, key: string) => {
       setNodes((nds) =>
@@ -95,6 +101,7 @@ const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     [nodes, selectedNode]
   );
 
+  // This function is called when back button is clicked in setting panel to mark all the nodes unselected
   const markAllAsUnSelected = useCallback(() => {
     setNodes((nds) =>
       nds.map((node) => {
