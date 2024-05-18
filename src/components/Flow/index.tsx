@@ -18,8 +18,6 @@ const Flow: React.FC = () => {
     onDragOver,
   } = useFlow();
 
-  console.log(nodes, 'nodes');
-
   return (
     <div className={styles.react_flow_container}>
       <ReactFlow

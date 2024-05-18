@@ -20,7 +20,6 @@ const reducer = (state: State, action: Action) => {
 };
 
 const setToastState = (state: State, toastState: toastState) => {
-  console.log(toastState, 'testing')
   return { ...state, toastState };
 };
 
