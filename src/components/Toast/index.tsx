@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useStore } from '../../contexts/Store';
 import ToastPresentation from './Presentation';
-import { ACTIONS } from '../constant/appConstant';
+import { ACTIONS } from '../../constants/appConstant';
 
 const Toast: React.FC = () => {
   const { toastState, dispatch } = useStore();
@@ -20,9 +20,7 @@ const Toast: React.FC = () => {
     return () => clearTimeout(timer);
   }, [toastState]);
 
-  return (
-    <ToastPresentation type={toastState.type} message={toastState.text} />
-  );
+  return <ToastPresentation type={toastState.type} message={toastState.text} />;
 };
 
 export default Toast;

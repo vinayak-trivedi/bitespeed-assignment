@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useContext, useReducer } from 'react';
 import { Action, State, toastState } from '../types/store';
-import { ACTIONS } from '../components/constant/appConstant';
+import { ACTIONS } from '../constants/appConstant';
 
 export const StoreContext = createContext<any>(undefined);
 

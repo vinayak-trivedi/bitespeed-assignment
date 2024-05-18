@@ -3,7 +3,7 @@ import {
   useGetInitialData,
   useGetToastMethods,
 } from '../../components/hooks/appHooks';
-import { ACTIONS } from '../../components/constant/appConstant';
+import { ACTIONS } from '../../constants/appConstant';
 import { useStore } from '../../contexts/Store';
 
 jest.mock('../../contexts/Store');

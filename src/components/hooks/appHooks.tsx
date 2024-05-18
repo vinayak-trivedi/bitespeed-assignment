@@ -1,5 +1,5 @@
 import { useStore } from '../../contexts/Store';
-import { ACTIONS } from '../constant/appConstant';
+import { ACTIONS } from '../../constants/appConstant';
 
 export const useGetInitialData = () => {
   // currently this returns only hardcoded values but in future we might be calling an API here and returning the intials nodes and edges from api response here
