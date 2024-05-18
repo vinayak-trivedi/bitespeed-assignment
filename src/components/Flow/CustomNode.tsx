@@ -9,10 +9,10 @@ const CustomNode: React.FC<any> = ({ data, selected }) => {
       }`}
     >
       <div className={styles.top_section}>
-        <img src="/message.svg" width={'10px'} height={'10px'} />
+        <img src="/message.svg" width={'10px'} height={'10px'} alt='chat icon' />
         <p className={styles.title}>{data.heading}</p>
         <div className={styles.spacer} />
-        <img src="/whatsapp.svg" width={'12px'} height={'12px'} />
+        <img src="/whatsapp.svg" width={'12px'} height={'12px'} alt='whatsapp icon' />
       </div>
       <p className={styles.content}>{data.content}</p>
       <Handle
