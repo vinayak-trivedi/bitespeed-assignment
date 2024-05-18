@@ -4,7 +4,7 @@ const SaveChangesPresentation: React.FC<{ saveNodeChanges: () => void }> = ({
   saveNodeChanges,
 }) => {
   return (
-    <div className={styles.save_changes_container}>
+    <div data-testid='save-changes-container' className={styles.save_changes_container}>
       <button onClick={saveNodeChanges} className={styles.save_button}>
         Save Changes
       </button>
