@@ -1,9 +1,11 @@
 import { Edge, Node } from 'reactflow';
 import { useFlow } from '../../contexts/FlowProvider';
 import SaveChangesPresentation from './Presentation';
+import { useGetToastMethods } from '../hooks/appHooks';
 
 const SaveChanges: React.FC = () => {
   const { nodes, edges } = useFlow();
+  const { notifySuccess, notifyError } = useGetToastMethods();
 
   function saveNodeChanges() {
     const targetHandlesCount = nodes.reduce((count: number, node: Node) => {
@@ -17,9 +19,9 @@ const SaveChanges: React.FC = () => {
     }, 0);
 
     if (targetHandlesCount > 1) {
-      alert('Failure');
+      notifyError('Cannot Save Flow, all nodes are not connected!');
     } else {
-      alert('Success');
+      notifySuccess('Flow saved successfully!');
     }
   }
 

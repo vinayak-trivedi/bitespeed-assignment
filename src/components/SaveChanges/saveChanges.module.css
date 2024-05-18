@@ -5,6 +5,8 @@
   background: rgb(211, 211, 211, 0.7);
   box-sizing: border-box;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
 }
 
 .save_changes_container .save_button {
@@ -16,4 +18,5 @@
   font-size: 14px;
   font-weight: 550;
   border-radius: 10px;
+  cursor: pointer;
 }
