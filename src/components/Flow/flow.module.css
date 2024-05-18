@@ -3,12 +3,12 @@
 }
 .custom_node {
   border-radius: 10px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 10px 0px var(--shadow);
   width: 170px;
 }
 
 .custom_node_selected {
-  border: 1px solid var(--primary-button-color);
+  border: 1px solid var(--blue);
 }
 
 .custom_node .top_section {

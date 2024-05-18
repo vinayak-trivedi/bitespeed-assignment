@@ -1,6 +1,9 @@
 :root {
-  --primary-button-color: #2620D9;
-  --border-color: #d3d3d3
+  --blue: #2620D9;
+  --light-gray: #d3d3d3;
+  --success: #4caf50;
+  --failure: #f44336;
+  --shadow: #00000026;
 }
 
 

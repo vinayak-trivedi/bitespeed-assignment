@@ -13,13 +13,13 @@
   cursor:grab;
   gap: 10px;
   padding: 20px;
-  border: 1px solid var(--primary-button-color);
+  border: 1px solid var(--blue);
   background: white;
   width: 150px;
 }
 
 .node_item .text {
-  color: var(--primary-button-color);
+  color: var(--blue);
   font-size: 14px;
   font-weight: 550;
 }
