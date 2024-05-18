@@ -17,15 +17,15 @@ import {
   useEdgesState,
   useNodesState,
 } from 'reactflow';
-import { useGetInitialNodes } from '../components/hooks/appHooks';
+import { useGetInitialData } from '../components/hooks/appHooks';
 
 export const FlowContext = createContext<any>(undefined);
 
 const FlowProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const initialNodes = useGetInitialNodes();
+  const { nodes: initialNodes, edges: initialEdges } = useGetInitialData();
   const reactFlowWrapper = useRef<HTMLDivElement | null>(null);
   const [nodes, setNodes, onNodesChange] = useNodesState<any>(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState<Edge[]>([]);
+  const [edges, setEdges] = useEdgesState<Edge[]>(initialEdges);
   const [reactFlowInstance, setReactFlowInstance] =
     useState<ReactFlowInstance | null>(null);
   const selectedNode = nodes.find((node) => node.selected === true);

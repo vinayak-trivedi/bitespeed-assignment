@@ -1,22 +1,25 @@
 import { useStore } from '../../contexts/Store';
 import { ACTIONS } from '../constant/appConstant';
 
-export const useGetInitialNodes = () => {
-  // currently this returns only a hardcoded values but in future we might be calling an API here and returning the intials node here
-  return [
-    {
-      id: '1',
-      type: 'node',
-      data: { heading: 'Send Message', content: 'Text 1' },
-      position: { x: 10, y: 200 },
-    },
-    {
-      id: '2',
-      type: 'node',
-      data: { heading: 'Send Message', content: 'Text 2' },
-      position: { x: 200, y: 100 },
-    },
-  ];
+export const useGetInitialData = () => {
+  // currently this returns only hardcoded values but in future we might be calling an API here and returning the intials nodes and edges from api response here
+  return {
+    nodes: [
+      {
+        id: '1',
+        type: 'node',
+        data: { heading: 'Send Message', content: 'Text 1' },
+        position: { x: 0, y: 150 },
+      },
+      {
+        id: '2',
+        type: 'node',
+        data: { heading: 'Send Message', content: 'Text 2' },
+        position: { x: 200, y: 100 },
+      },
+    ],
+    edges: [{ id: 'e1-2', source: '1', target: '2' }],
+  };
 };
 
 export const useGetToastMethods = () => {
